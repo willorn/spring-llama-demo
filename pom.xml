@@ -22,9 +22,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--适配 openai 接口-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+        </dependency>
+        <!--适配 ollama 模型接口 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -53,27 +59,6 @@
             </plugin>
         </plugins>
     </build>
-    <!--<repositories>-->
-    <!--    &lt;!&ndash; 出现依赖问题，可能是阿里和华为库都没有ai相关依赖导致的，这里可以本地用一些魔法 &ndash;&gt;-->
-	<!--	<repository>-->
-	<!--		<id>central</id>-->
-	<!--		<url>https://repo.maven.apache.org/maven2</url>-->
-	<!--	</repository>-->
-    <!--    <repository>-->
-    <!--        <id>jcenter</id>-->
-    <!--        <url>https://jcenter.bintray.com/</url>-->
-    <!--    </repository>-->
-    <!--</repositories>-->
-	<!--<repositories>-->
-	<!--	<repository>-->
-	<!--		<id>central</id>-->
-	<!--		<url>https://repo.maven.apache.org/maven2</url>-->
-	<!--		<snapshots>-->
-	<!--			<enabled>false</enabled>-->
-	<!--		</snapshots>-->
-	<!--	</repository>-->
-	<!--</repositories>-->
-
     <repositories>
         <repository>
             <id>spring-milestones</id>
