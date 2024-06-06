@@ -31,116 +31,20 @@ git clone https://github.com/willorn/spring-llama-demo
 cd spring-llama-demo
 ```
 
-### 4. 配置项目
-确保 `pom.xml` 文件内容如下：
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-    <groupId>com.example</groupId>
-    <artifactId>spring-ai</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>spring-ai</name>
-    <description>spring-ai</description>
-    <properties>
-        <java.version>21</java.version>
-        <spring-ai.version>1.0.0-M1</spring-ai.version>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!--适配 openai 接口-->
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
-        </dependency>
-        <!--适配 ollama 模型接口 -->
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-ollama-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.ai</groupId>
-                <artifactId>spring-ai-bom</artifactId>
-                <version>${spring-ai.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>https://repo.spring.io/snapshot</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
-</project>
-```
-
-### 5. 构建项目
+### 4. 构建项目
 在项目根目录下运行以下命令：
 ```sh
 mvn clean install
 ```
 
-### 6. 运行项目
+### 5. 运行项目
 使用以下命令启动 Spring Boot 应用：
 ```sh
 mvn spring-boot:run
 ```
 
-### 7. 访问应用
-打开浏览器，访问 `http://localhost:8080` 查看应用是否启动成功。
-
-## 项目结构
-```plaintext
-spring-ai/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   └── resources/
-│   └── test/
-├── pom.xml
-└── README.md
-```
+### 6. 访问应用
+打开浏览器，访问 `http://localhost:15001` 查看应用是否启动成功。
 
 ## 结语
 按照上述步骤，您可以在 Windows 环境下成功搭建并运行 Spring AI 项目。如果遇到任何问题，请查阅相关文档或寻求社区帮助。
